@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* :root {
+            --marginPX: 50px;
+            --bgColor: rgb(143, 79, 37);
+        }
+
+        .unOrder {
+            background-color: blue;
+            padding: 10px;
+            padding: var(--marginPX);
+            color: var(--bgColor);
+        }
+
+        .unOrder li:nth-child(1) {
+            background-color: aqua;
+        }
+
+        .ListOne{
+            background-color: aqua;
+        }
+        .subList li:nth-child(1) {
+            background-color: burlywood;
+        } */
+        h1{
+            background-color: black;
+            color: white;
+            /* transform: rotateY(120deg); */
+            position: relative;
+            transition: all 2s linear;
+        }h1:hover{
+            background-color: aqua;
+        }
+        h1::before{
+            content: "";
+            background-color: blue;
+            position: absolute;
+            height: 10px;width: 50%;
+            transition: all 2s linear;
+        }
+        h1::after{
+            content: "";
+            background-color: yellow;
+            position: absolute;
+            height: 10px;width: 0%;
+            bottom: 0;
+            transition: all 2s linear;
+        }
+        h1:hover::before{
+            width: 00%;   
+
+        }
+        h1:hover::after{
+            width: 50%;   
+
+        }
+    </style>
+   <h1>
+       Head
+   </h1>
+</body>
+
+</html>
