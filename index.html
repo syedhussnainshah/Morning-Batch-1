@@ -17,6 +17,22 @@
             animation: Animate 5s infinite;
         }
 
+        .Main ul {
+            background-color: blue;
+            animation: liAnimate 3s infinite;
+        }
+
+        @keyframes liAnimate {
+            0% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: pink;
+            }
+
+        }
+
         @keyframes Animate {
             0% {}
 
@@ -43,7 +59,12 @@
         }
     </style>
     <div class="Main">
-
+        <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
     </div>
 </body>
 
