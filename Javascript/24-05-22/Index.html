@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="todoinput">
+    <button id="btn">Add Me</button>
+    <ul id="unorder">
+
+    </ul>
+    <script>
+        let input = document.getElementById('todoinput');
+        let btn = document.getElementById('btn');
+        let ul = document.getElementById('unorder');
+        btn.addEventListener('click', function () {
+            let li = document.createElement('li');
+            let todoinput = document.createElement('input');
+            todoinput.setAttribute('type', 'text');
+            todoinput.setAttribute('value', input.value);
+            todoinput.setAttribute('readonly', 'readonly');
+            li.appendChild(todoinput);
+            let edit = document.createElement('button');
+            edit.innerHTML='EDIT';
+            let del = document.createElement('button');
+            del.innerHTML='DELETE';
+            li.appendChild(del);
+            li.appendChild(edit);
+            ul.appendChild(li);
+            console.log(li);
+        })
+    </script>
+</body>
+
+</html>
